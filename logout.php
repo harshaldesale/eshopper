@@ -1,0 +1,11 @@
+<?php  
+session_start();
+session_regenerate_id(true);
+session_unset($_SESSION['id']);
+session_unset($_SESSION['name']);
+session_unset($_SESSION['email']);
+session_unset($_SESSION['mobile']);
+session_unset($_SESSION['passowrd']);
+session_destroy();
+header("location:login.php");
+?>
